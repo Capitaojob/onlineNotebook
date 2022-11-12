@@ -143,11 +143,18 @@ let circleText = "white"
             menu.style.color = "red"
 
             document.querySelector("iframe").style.right = 0
+            document.querySelector("iframe").style.display = "block"
             document.querySelector(".credit").style.right = 0
+            document.querySelector(".credit").style.display = "block"
             document.querySelector("#styleForm").style.left = 0
 
             if (screen.width <= 878) {
                 css.style.setProperty('--jsEditable', "1")
+                css.style.setProperty('--jsEditableC', "0")
+                css.style.setProperty('--canOver', "scroll")
+
+                document.querySelector(".pageTitle").style.pointerEvents = "none";
+                document.querySelector("#realText").style.pointerEvents = "none";
             }
         } else {
             menu.classList.remove("fa-xmark")
@@ -155,11 +162,18 @@ let circleText = "white"
             menu.style.color = "white"
 
             document.querySelector("iframe").style.right = "-1000px"
+            document.querySelector("iframe").style.display = "none"
             document.querySelector(".credit").style.right = "-700px"
+            document.querySelector(".credit").style.display = "none"
             document.querySelector("#styleForm").style.left = "-1000px"
 
             if (screen.width <= 878) {
                 css.style.setProperty('--jsEditable', "0")
+                css.style.setProperty('--jsEditableC', "1")
+                css.style.setProperty('--canOver', "hidden")
+
+                document.querySelector(".pageTitle").style.pointerEvents = "all";
+                document.querySelector("#realText").style.pointerEvents = "all";
             }
         }
     })
