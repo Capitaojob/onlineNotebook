@@ -145,14 +145,22 @@ let circleText = "white"
             document.querySelector("iframe").style.right = 0
             document.querySelector(".credit").style.right = 0
             document.querySelector("#styleForm").style.left = 0
+
+            if (screen.width <= 878) {
+                css.style.setProperty('--jsEditable', "1")
+            }
         } else {
             menu.classList.remove("fa-xmark")
             menu.classList.add("fa-bars")
             menu.style.color = "white"
 
-            document.querySelector("iframe").style.right = "-500px"
-            document.querySelector(".credit").style.right = "-500px"
-            document.querySelector("#styleForm").style.left = "-500px"
+            document.querySelector("iframe").style.right = "-1000px"
+            document.querySelector(".credit").style.right = "-700px"
+            document.querySelector("#styleForm").style.left = "-1000px"
+
+            if (screen.width <= 878) {
+                css.style.setProperty('--jsEditable', "0")
+            }
         }
     })
 
