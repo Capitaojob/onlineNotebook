@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Notebook</title>
+
+  <link rel="shortcut icon" href="favicons/openbook.ico" type="image/x-icon">
+
+  <!--Font Awesome Icons-->
+  <script src="https://kit.fontawesome.com/a6a7a72d34.js" crossorigin="anonymous"></script>
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Island+Moments&family=Roboto+Mono&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+
+  <!--CSS Link-->
+  <link rel="stylesheet" href="style.css">
+
+  <!--CSS Links
+    font-family: 'Dancing Script', cursive;
+
+    font-family: 'Island Moments', cursive;
+
+    font-family: 'Shadows Into Light', cursive;-->
+</head>
+<body>
+  <form id="styleForm">
+    <fieldset id="penCol">
+      <p>Pen Color</p>
+      <div class="select">
+        <label for="Blue Pen">Blue Pen</label>
+        <input type="radio" name="penType" id="bPen" value="bPen">
+      </div>
+      <div class="select">
+        <label for="Red Pen">Red Pen</label>
+        <input type="radio" name="penType" id="rPen" value="rPen">
+      </div>
+      <div class="select">
+        <label for="Black Pen">Black Pen</label>
+        <input type="radio" name="penType" id="blPen" value="blPen" checked>
+      </div>
+      <div class="select">
+        <label for="White Pen">White Pen</label>
+        <input type="radio" name="penType" id="wPen" value="wPen" checked>
+      </div>
+    </fieldset>
+
+    <br />
+
+    <fieldset id="topPenCol">
+      <p>Top Colors</p>
+      <div class="select">
+        <label for="Blue Pen">Blue Pen</label>
+        <input type="radio" name="tPenType" id="tbPen" value="bPen">
+      </div>
+      <div class="select">
+        <label for="Red Pen">Red Pen</label>
+        <input type="radio" name="tPenType" id="trPen" value="rPen">
+      </div>
+      <div class="select">
+        <label for="Black Pen">Black Pen</label>
+        <input type="radio" name="tPenType" id="tblPen" value="blPen">
+      </div>
+      <div class="select">
+        <label for="White Pen">White Pen</label>
+        <input type="radio" name="tPenType" id="twPen" value="wPen">
+      </div>
+      <div class="select">
+        <label for="Default Pen">Default Color</label>
+        <input type="radio" name="tPenType" id="tdPen" value="dPen" checked>
+      </div>
+    </fieldset>
+
+    <br />
+
+    <fieldset id="pageStyle">
+        <p>Page Style</p>
+        <div class="select">
+          <label for="nPage">Notebook</label>
+          <input type="radio" name="pageType" id="nPage" value="nPage" checked>
+        </div>
+        <div class="select">
+          <label for="pPage">Papyro</label>
+          <input type="radio" name="pageType" id="pPage" value="pPage">
+        </div>
+        <div class="select">
+          <label for="mPage">Modern</label>
+          <input type="radio" name="pageType" id="mPage" value="mPage">
+        </div>
+      </fieldset>
+
+      <br />
+
+      <fieldset id="pageStyle">
+        <p>Custom</p>
+        <div class="select">
+          <label for="ccPen">Pen Color</label>
+          <input class="textInput penColor" type="text" name="pageType" id="ccPen">
+        </div>
+        <div class="select">
+            <label for="ccTop">Top Color</label>
+            <input class="textInput topColor" type="text" name="pageType" id="ccTop">
+          </div>
+          <div class="select">
+            <label for="ccPage">Page Color</label>
+            <input class="textInput pageColor" type="text" name="pageType" id="ccPage">
+          </div>
+          <div class="select">
+            <label for="ccBack">Background</label>
+            <input class="textInput backColor" type="text" name="pageType" id="ccBack">
+          </div>
+          <div class="select">
+            <label for="ccTint">Tint Color</label>
+            <input class="textInput tintColor" type="text" name="pageType" id="ccTint">
+          </div>
+      </fieldset>
+  </form>
+
+  <i class="fa-solid fa-bars"></i>
+  <iframe src="https://htmlcolorcodes.com/" frameborder="0"></iframe>
+  <span class="credit">Credits to HTML Color Codes<br /><a href="https://htmlcolorcodes.com/" style="text-decoration: none;">htmlcolorcodes.com</a></span>
+
+  <div class="page">
+    <div class="calendar">
+      <div class="pageTitle">
+        <h1 contenteditable="true">Page Title</h1>
+      </div>
+      <div class="dF">
+        <div class="fL">
+          <div class="dates">
+            <p>data</p>
+            <p>fecha</p>
+          </div>
+          <ul class="datas">
+            <div class="numbers">
+              <span contenteditable="true" class="n1">10</span>
+              <span contenteditable="true" class="n2">12</span>
+              <span contenteditable="true" id="n3">22</span>
+            </div>
+            <li id="leftLi"></li>
+            <li id="rightLi"></li>
+          </ul>
+        </div>
+        <hr id="calendarDiv"/>
+        <div class="cContainer">
+          <div class="circ">D</div>
+          <div class="circ">S</div>
+          <div class="circ">T</div>
+          <div class="circ">Q</div>
+          <div class="circ">Q</div>
+          <div class="circ">S</div>
+          <div class="circ">S</div>
+          <div class="circ">L</div>
+          <div class="circ">M</div>
+          <div class="circ">M</div>
+          <div class="circ">J</div>
+          <div class="circ">V</div>
+          <div class="circ">S</div>
+          <div class="circ">D</div>
+        </div>
+      </div>
+    </div>
+    <div class="lines">
+      <hr id="firstline"/>
+      <div class="VlineContainer">
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+        <div class="Vline"></div>
+      </div>
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <p id="realText" contenteditable="true">Inicialização para Testes</p>
+      <span class="blueColoredText" style="background-color: blue"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
